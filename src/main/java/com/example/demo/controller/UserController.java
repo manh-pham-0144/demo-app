@@ -21,29 +21,38 @@ public class UserController {
 
 
     @GetMapping("list")
-    public String listUser(Model model){
+    public String listUser(Model model) {
         List<User> listUser = userRepository.findAll();
         model.addAttribute("listUser", listUser);
         return "user-list";
     }
 
     @GetMapping("edit")
-    public String editUser(@RequestParam(value = "id") int id, Model model){
+    public String editUser(@RequestParam(value = "id") int id, Model model) {
         User user = userRepository.findById(id).orElse(null);
         model.addAttribute("user", user);
         return "user-edit";
     }
 
+    @PostMapping("edit")
+    public String send() {
+        return "send";
+    }
+
     @GetMapping("edit-selenium")
-    public String editSelenium(@RequestParam(value = "id") int id, Model model){
+    public String editSelenium(@RequestParam(value = "id") int id, Model model) {
         User user = userRepository.findById(id).orElse(null);
         model.addAttribute("user", user);
         return "user-edit-selenium";
     }
 
-    @PostMapping("edit")
-    public String send(){
-        return "send";
+    @PostMapping("edit-selenium")
+    public String sendSelenium(@RequestParam(value = "id") int id, @RequestParam(value = "note") String note, Model model) {
+        User user = userRepository.findById(id).orElse(null);
+        model.addAttribute("user", user);
+        model.addAttribute("note", note);
+        return "send-selenium";
     }
+
 
 }
