@@ -2,30 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>List User</title>
-
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <meta name="description" content="Portal - Bootstrap 5 Admin Dashboard Template For Developers">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
     <link rel="shortcut icon" href="favicon.ico">
-
     <!-- FontAwesome JS-->
     <script defer th:src="@{'/assets/plugins/fontawesome/js/all.min.js'}"></script>
-
     <!-- App CSS -->
     <link id="theme-style" rel="stylesheet" th:href="@{'/assets/css/portal.css'}">
-
 </head>
-
 <body class="app">
 <div th:replace="header.html :: header"></div>
 <div class="app-wrapper">
     <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
-
             <div class="row g-3 mb-4 align-items-center justify-content-between">
                 <div class="col-auto">
                     <h1 class="app-page-title mb-0">List Users</h1>
@@ -43,20 +36,13 @@
                                         <button type="submit" class="btn app-btn-secondary">Search</button>
                                     </div>
                                 </form>
-
                             </div><!--//col-->
-
                         </div><!--//row-->
                     </div><!--//table-utilities-->
                 </div><!--//col-auto-->
             </div><!--//row-->
-
-
             <nav id="orders-table-tab" class="orders-table-tab app-nav-tabs nav shadow-sm flex-column flex-sm-row mb-4">
-
             </nav>
-
-
             <div class="tab-content" id="orders-table-tab-content">
                 <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
                     <div class="app-card app-card-orders-table shadow-sm mb-5">
@@ -96,24 +82,16 @@
                             </li>
                         </ul>
                     </nav><!--//app-pagination-->
-
                 </div><!--//tab-pane-->
             </div><!--//tab-content-->
-
-
         </div><!--//container-fluid-->
     </div><!--//app-content-->
-
-
 </div><!--//app-wrapper-->
-
-
 <!-- Javascript -->
 <script th:src="@{'/assets/plugins/popper.min.js'}"></script>
 <script th:src="@{'/assets/plugins/bootstrap/js/bootstrap.min.js'}"></script>
 <!-- Page Specific JS -->
 <script th:src="@{'/assets/js/app.js'}"></script>
-
 </body>
 </html> 
 

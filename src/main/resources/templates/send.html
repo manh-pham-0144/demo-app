@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Edit User</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+          integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+          crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+    <link th:href="@{/assets/css/portal.css}" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/png" th:href="@{/assets/images/favicon.png}"/>
 </head>
-<body>
-<h1>Send</h1>
+<body class="app">
+<div th:replace="header.html :: header"></div>
+<div style="margin-top: 20px" class="app-wrapper">
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+        <div class="container-xl">
+            <h1 class="app-page-title">User Detail</h1>
+            <div class="row g-4 settings-section">
+                <div class="app-card app-card-settings shadow-sm p-4">
+                    <div class="app-card-body">
+                        <form class="settings-form">
+                            <div class="mb-3">
+                                <span>ID: [[${user.id}]]</span>
+                            </div>
+                            <div class="mb-3">
+                                <span> Name: [[${user.username}]]</span>
+                            </div>
+                            <div class="mb-3">
+                                <span>Email: [[${user.email}]]</span>
+                            </div>
+                            <div class="mb-3">
+                                <span>Note: [[${note}]]</span>
+                            </div>
+                        </form>
+                    </div><!--//app-card-body-->
+
+                </div><!--//app-card-->
+            </div>
+        </div><!--//row-->
+
+    </div><!--//app-wrapper-->
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- Javascript -->
+<script th:src="@{/assets/plugins/popper.min.js}"></script>
+<script th:src="@{/assets/plugins/bootstrap/js/bootstrap.min.js}"></script>
+<!-- Page Specific JS -->
+<script th:src="@{/assets/js/app.js}"></script>
 </body>
 </html>
